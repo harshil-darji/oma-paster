@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cedar Labs — Platform Engineer Application</title>
+<style>
+  :root { color: #20232a; background: #f8f7f4; font: 16px/1.45 Inter, system-ui, sans-serif; }
+  body { margin: 0; } main { width: min(680px, calc(100% - 40px)); margin: 56px auto; }
+  .eyebrow { color: #8c5631; font-weight: 700; font-size: .78rem; letter-spacing: .09em; text-transform: uppercase; }
+  h1 { margin: 6px 0; font: 700 clamp(1.7rem, 5vw, 2.5rem)/1.1 Georgia, serif; }
+  .lede { color: #656158; margin: 0 0 30px; }
+  form { background: white; border: 1px solid #e0dbd0; box-shadow: 0 12px 32px #3c2b1610; padding: 30px; }
+  fieldset { border: 0; padding: 0; margin: 0 0 23px; } label, legend { display: block; font-weight: 650; margin-bottom: 7px; }
+  input { width: 100%; padding: 11px 12px; box-sizing: border-box; border: 1px solid #c9c1b4; border-radius: 4px; font: inherit; }
+  .choices { display: flex; gap: 18px; } .choices label { font-weight: 400; margin: 0; }
+  .choices input { width: auto; margin-right: 6px; } button { padding: 11px 16px; border: 0; border-radius: 4px; background: #8c5631; color: white; font: 650 15px inherit; cursor: pointer; }
+  .demo { padding: 10px 12px; margin-bottom: 22px; color: #625547; background: #faf2e8; border-left: 3px solid #c98c59; font-size: .9rem; }
+  #done { display: none; margin-top: 18px; padding: 12px; background: #eff8f1; color: #215d34; }
+</style>
+</head>
+<body><main>
+  <div class="eyebrow">Demo application · Cedar Labs</div>
+  <h1>Platform Engineer</h1>
+  <p class="lede">A second fictional form. Its sponsorship question is intentionally reworded for the memory demo.</p>
+  <form id="application">
+    <div class="demo">Demo only — this form does not send information anywhere.</div>
+    <fieldset><label for="name">Applicant name *</label><input id="name" name="name" autocomplete="name" required></fieldset>
+    <fieldset><label for="contact-email">Contact email *</label><input id="contact-email" name="contact-email" type="email" autocomplete="email" required></fieldset>
+    <fieldset>
+      <legend>Do you now or in the future need visa sponsorship? *</legend>
+      <div class="choices">
+        <label><input type="radio" name="visa-sponsorship" value="Yes" required> Yes</label>
+        <label><input type="radio" name="visa-sponsorship" value="No"> No</label>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>May we contact you about future opportunities? *</legend>
+      <div class="choices">
+        <label><input type="radio" name="future-contact" value="Yes" required> Yes</label>
+        <label><input type="radio" name="future-contact" value="No"> No</label>
+      </div>
+    </fieldset>
+    <button type="submit">Submit demo application</button>
+    <p id="done" role="status">Demo complete — no information was submitted.</p>
+  </form>
+</main><script>document.querySelector('#application').addEventListener('submit', e => { e.preventDefault(); document.querySelector('#done').style.display = 'block'; });</script></body>
+</html>

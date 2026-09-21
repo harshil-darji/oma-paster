@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Northstar Cloud — Software Engineer Application</title>
+<style>
+  :root { color: #182229; background: #f6f8f8; font: 16px/1.45 Inter, system-ui, sans-serif; }
+  body { margin: 0; } main { width: min(680px, calc(100% - 40px)); margin: 56px auto; }
+  .eyebrow { color: #397080; font-weight: 700; font-size: .78rem; letter-spacing: .09em; text-transform: uppercase; }
+  h1 { margin: 6px 0; font: 700 clamp(1.7rem, 5vw, 2.5rem)/1.1 Georgia, serif; }
+  .lede { color: #58666c; margin: 0 0 30px; }
+  form { background: white; border: 1px solid #d9e0e1; box-shadow: 0 12px 32px #1c3a4010; padding: 30px; }
+  fieldset { border: 0; padding: 0; margin: 0 0 23px; } label, legend { display: block; font-weight: 650; margin-bottom: 7px; }
+  input { width: 100%; padding: 11px 12px; box-sizing: border-box; border: 1px solid #b9c5c8; border-radius: 4px; font: inherit; }
+  .choices { display: flex; gap: 18px; } .choices label { font-weight: 400; margin: 0; }
+  .choices input { width: auto; margin-right: 6px; } button { padding: 11px 16px; border: 0; border-radius: 4px; background: #286d7e; color: white; font: 650 15px inherit; cursor: pointer; }
+  .demo { padding: 10px 12px; margin-bottom: 22px; color: #496068; background: #eef5f5; border-left: 3px solid #75aab5; font-size: .9rem; }
+  #done { display: none; margin-top: 18px; padding: 12px; background: #eff8f1; color: #215d34; }
+</style>
+</head>
+<body><main>
+  <div class="eyebrow">Demo application · Northstar Cloud</div>
+  <h1>Software Engineer</h1>
+  <p class="lede">A fictional form for recording an oma-paster demo. Do not use for a real application.</p>
+  <form id="application">
+    <div class="demo">Demo only — this form does not send information anywhere.</div>
+    <fieldset><label for="full-name">Full name *</label><input id="full-name" name="full-name" autocomplete="name" required></fieldset>
+    <fieldset><label for="email">Email address *</label><input id="email" name="email" type="email" autocomplete="email" required></fieldset>
+    <fieldset>
+      <legend>Will you require sponsorship now or in the future? *</legend>
+      <div class="choices">
+        <label><input type="radio" name="sponsorship" value="Yes" required> Yes</label>
+        <label><input type="radio" name="sponsorship" value="No"> No</label>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>Are you authorized to work in the United States? *</legend>
+      <div class="choices">
+        <label><input type="radio" name="authorized" value="Yes" required> Yes</label>
+        <label><input type="radio" name="authorized" value="No"> No</label>
+      </div>
+    </fieldset>
+    <button type="submit">Submit demo application</button>
+    <p id="done" role="status">Demo complete — no information was submitted.</p>
+  </form>
+</main><script>document.querySelector('#application').addEventListener('submit', e => { e.preventDefault(); document.querySelector('#done').style.display = 'block'; });</script></body>
+</html>
