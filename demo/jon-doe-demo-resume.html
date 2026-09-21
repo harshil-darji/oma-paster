@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jon Doe — Demo Resume</title>
+<style>
+  @page { size: letter; margin: .55in .65in; }
+  * { box-sizing: border-box; }
+  body { margin: 0; color: #1d252c; font: 10.2pt/1.42 Arial, Helvetica, sans-serif; }
+  header { border-bottom: 2px solid #2f6f8f; padding-bottom: 12px; margin-bottom: 15px; }
+  h1 { margin: 0; font-size: 25pt; font-weight: 700; letter-spacing: -.6px; }
+  .role { margin: 2px 0 7px; color: #2f6f8f; font-size: 12pt; font-weight: 600; }
+  .contact { color: #4b5760; font-size: 9.5pt; }
+  .contact span + span::before { content: " · "; color: #8b969d; }
+  section { margin: 0 0 13px; }
+  h2 { margin: 0 0 6px; color: #2f6f8f; font-size: 10.5pt; letter-spacing: 1.2px; text-transform: uppercase; }
+  p { margin: 0; }
+  .summary { max-width: 7.1in; }
+  .job { margin: 0 0 10px; }
+  .jobhead { display: flex; justify-content: space-between; gap: 14px; font-weight: 700; }
+  .company { color: #2f6f8f; font-weight: 600; }
+  .date { white-space: nowrap; color: #4b5760; font-weight: 400; }
+  ul { margin: 4px 0 0; padding-left: 18px; }
+  li { margin: 2px 0; }
+  .skills { display: grid; grid-template-columns: 120px 1fr; gap: 3px 10px; }
+  .skills b { color: #36434b; }
+  .education { display: flex; justify-content: space-between; gap: 14px; }
+  .muted { color: #4b5760; }
+</style>
+</head>
+<body>
+  <header>
+    <h1>Jon Doe</h1>
+    <p class="role">Software Engineer</p>
+    <p class="contact"><span>Seattle, WA</span><span>jon.doe@example.com</span><span>+1 (555) 010-2048</span><span>linkedin.com/in/jon-doe-demo</span><span>github.com/jon-doe-demo</span></p>
+  </header>
+
+  <section>
+    <h2>Summary</h2>
+    <p class="summary">Product-minded software engineer with six years of experience building reliable web services and developer tools. Comfortable taking systems from design through production, with a focus on clear interfaces, pragmatic automation, and measurable customer impact.</p>
+  </section>
+
+  <section>
+    <h2>Experience</h2>
+    <div class="job">
+      <div class="jobhead"><span>Senior Software Engineer <span class="company">· Northstar Cloud</span></span><span class="date">May 2022 – Present</span></div>
+      <ul>
+        <li>Led delivery of a workflow platform used by 40+ internal teams, reducing manual release coordination by 65%.</li>
+        <li>Designed TypeScript and Python services on AWS with event-driven pipelines, observability, and role-based access controls.</li>
+        <li>Partnered with product and design to ship self-service onboarding, improving first-week activation from 52% to 78%.</li>
+      </ul>
+    </div>
+    <div class="job">
+      <div class="jobhead"><span>Software Engineer <span class="company">· Cedar Labs</span></span><span class="date">Aug 2019 – Apr 2022</span></div>
+      <ul>
+        <li>Built customer-facing analytics features in React and Go for a B2B SaaS platform serving 12,000+ users.</li>
+        <li>Modernized CI/CD and test tooling, cutting median deployment time from 45 minutes to 12 minutes.</li>
+        <li>Mentored four early-career engineers and wrote internal engineering guides adopted across the organization.</li>
+      </ul>
+    </div>
+    <div class="job">
+      <div class="jobhead"><span>Software Engineering Intern <span class="company">· Harbor Systems</span></span><span class="date">Jun 2018 – Aug 2018</span></div>
+      <ul><li>Implemented API integrations and dashboard components for operations teams using Python, PostgreSQL, and React.</li></ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Skills</h2>
+    <div class="skills">
+      <b>Languages</b><span>TypeScript, Python, Go, SQL, JavaScript</span>
+      <b>Frontend</b><span>React, Next.js, HTML, CSS, accessibility</span>
+      <b>Backend & cloud</b><span>AWS, Docker, PostgreSQL, Redis, REST APIs, event-driven systems</span>
+      <b>Engineering</b><span>System design, CI/CD, observability, testing, technical mentorship</span>
+    </div>
+  </section>
+
+  <section>
+    <h2>Education</h2>
+    <div class="education"><span><b>B.S. Computer Science</b> <span class="muted">· University of Washington</span></span><span class="date">2015 – 2019</span></div>
+  </section>
+
+  <section>
+    <h2>Additional</h2>
+    <p>Authorized to work in the United States · Available to start with two weeks’ notice · Open to hybrid or remote roles</p>
+  </section>
+</body>
+</html>

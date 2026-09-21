@@ -1,0 +1,41 @@
+[project]
+name = "oma-paster"
+version = "0.1.0"
+description = "Fill job applications from your resume: GLiNER extract + cua-s1 decide + Playwright"
+readme = "README.md"
+requires-python = ">=3.12,<3.14"
+license = { text = "MIT" }
+authors = [{ name = "Harshil" }]
+urls = { Repository = "https://github.com/harshil-darji/oma-paster", Issues = "https://github.com/harshil-darji/oma-paster/issues" }
+dependencies = [
+    "cua-s1",
+    "fastapi>=0.115",
+    "gliner2[local]>=1.0",
+    "huggingface-hub>=0.26",
+    "playwright>=1.63.0",
+    "protobuf>=7.36.2",
+    "pypdf>=6.19.0",
+    "uvicorn[standard]>=0.32",
+]
+
+[project.scripts]
+oma-paster = "oma_paster.launch:main"
+oma-paster-server = "oma_paster.server:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/oma_paster"]
+
+[tool.uv]
+package = true
+
+[tool.uv.sources]
+cua-s1 = { git = "https://github.com/trycua/cua.git", subdirectory = "libs/cua-s1/python" }
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+]

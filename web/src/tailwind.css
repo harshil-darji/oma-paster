@@ -1,0 +1,3 @@
+/* Tailwind theme + utilities only (no preflight) so the app's own base styles stay in charge. */
+@import "tailwindcss/theme" layer(theme);
+@import "tailwindcss/utilities" layer(utilities);
