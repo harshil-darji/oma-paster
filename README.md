@@ -43,6 +43,17 @@ On first launch, the local models download once. Then open **oma-paster** from y
 
 Your resume, profile, remembered answers, and settings live in `~/.local/share/oma-paster` with owner-only permissions. Model downloads, the application page you open, and any submission you choose to make use the network. There is no telemetry.
 
+## 🎬 Demo forms
+
+Two fictional forms are included for a safe memory demo. Serve them locally, then paste each URL into oma-paster:
+
+```bash
+cd demo
+python -m http.server 8080
+```
+
+Start with `http://127.0.0.1:8080/01-first-application.html`, answer the sponsorship question, then open `http://127.0.0.1:8080/02-memory-application.html` to show the reworded memory suggestion.
+
 ## 🛠 Development
 
 The Python server serves the built UI from `static/`. To work on the React UI:
